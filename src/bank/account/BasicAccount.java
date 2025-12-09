@@ -6,7 +6,7 @@ public class BasicAccount implements Account {
 
 	private String accountNummer ;
 	
-	private double  balance ;
+	protected double  balance ;
 	
 	private User owner ;
 	
@@ -16,7 +16,7 @@ public class BasicAccount implements Account {
 		
 		
 		
-		if (accountNummer.isEmpty() || accountnummer == null ) {
+		if ( accountnummer == null || getAccountNummer().isEmpty() ) {
 			
 			throw new IllegalArgumentException( " Die AccountNummer darf  auf null unterschiedlich sein ") ;
 		}
